@@ -1,0 +1,29 @@
+\documentclass[CCT]{ctexart}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{enumerate}
+\usepackage{algorithm}
+\usepackage{color}
+\usepackage{algpseudocode}
+\usepackage{graphics}
+\usepackage{epsfig}
+
+
+\renewcommand{\algorithmicrequire}{\textbf{Initialization:}} % Use Input in the format of Algorithm
+\renewcommand{\algorithmicensure}{\textbf{Iteration:}} % Use Output in the format of Algorithm
+
+
+\newtheorem{theorem}{Theorem}
+\input bnp-macro
+\usepackage{geometry}   %设置页边距的宏包
+\newtheorem{proposition}[theorem]{Proposition}
+
+\geometry{left=4cm,right=0.3cm,top=4cm,bottom=2cm}  % 设置 上、左、下、右 页边距
+\usepackage{pgf, tikz}
+
+\begin{document}
+
+\end{document}

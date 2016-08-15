@@ -1,0 +1,64 @@
+\documentclass[CCT]{ctexart}
+\usepackage{indentfirst}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{float}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{enumerate}
+\usepackage{algorithm}
+\usepackage{color}
+\usepackage{algpseudocode}
+\usepackage{graphics}
+\usepackage{epsfig}
+
+\renewcommand{\algorithmicrequire}{\textbf{Initialization:}} % Use Input in the format of Algorithm
+\renewcommand{\algorithmicensure}{\textbf{Iteration:}} % Use Output in the format of Algorithm
+
+
+\newtheorem{theorem}{Theorem}
+\input bnp-macro
+\usepackage{geometry}   %设置页边距的宏包
+\newtheorem{proposition}[theorem]{Proposition}
+
+\geometry{left=4cm,right=0.3cm,top=4cm,bottom=2cm}  % 设置 上、左、下、右 页边距
+\usepackage{pgf, tikz}
+
+\begin{document}
+
+\title{My Quant Notes}
+\author{Hans Yang}
+\date{\today}
+
+\maketitle
+\tableofcontents
+\newpage
+
+\part{事件驱动策略}
+\section{高管增持事件}
+
+\fontsize{9}{11}
+\selectfont
+\begin{center}
+  [高管增持事件选股：追踪真正的聪明钱,  \emph{丁鲁明},  中信建投， 2016.08.03]
+\end{center}
+\fontsize{10}{11}
+\selectfont
+\vspace{0.5cm}
+
+
+\subsection{高管增持事件概述}
+高管增持事件是上市公司董事、监事和高级管理人员利用自有资金在二级市场增持自己公司的行为。高管大额增持通常意味着其看好公司未来的发展，或者认为公司股票受到低估，也表明公司大概率内不存在很大的潜在利空，改善了市场对于上市公司的预期，通过一段时间的持续发酵，在未来的一段时间内，通常能够显著地跑赢市场。
+
+\subsubsection{高管增持事件公告日}
+根据规定，上市公司董事、监事和高级管理人员所持本公司股份发生变动的，应当自该事实发生之日起2个交易日内，向上市公司报告并由上市公司在证券交易所网站进行公告。深圳交易所的上市公司一般满足这种情况，Wind将持股变动日后的第1个交易日作为公告日期。而上海证券交易所的上市公司高管发生持股变动时，由上市公司在交易所网站上自行填报，填报日就是官网上显示的填报日期，但是不能明确肯定填报发生在盘前还是盘后，所以我们将填报日期的后1个交易日作为分析的关键时点。
+
+\subsubsection{高管增持事件最优投资策略}
+根据上面的分析，在当日高管增持金额达到300万元以上时，可以认为是有效增持。同时，高管增持事件的最优持有区间为公告日T+1到公告日后50个交易日。因此，我们可以构建策略：在公告日T+1收盘时买入增持金额大于300万的股票，公告日以后50个交易日卖出。该策略的组合均剔除掉交易日一字板涨跌停和停牌的股票。
+
+\begin{enumerate}
+  \item 在当日高管增持金额达到300万元以上时，可以认为是有效增持。
+  \item 在公告日T+1收盘时买入增持金额大于300万的股票
+  \item 在公告日T+50日卖出持有股票
+  \item 剔除掉交易日一字板涨跌停和停牌的股票
+\end{enumerate}
+\end{document}
