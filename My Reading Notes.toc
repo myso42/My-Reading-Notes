@@ -1,5 +1,0 @@
-\contentsline {part}{第一部分\hspace {1em}事件驱动策略}{2}
-\contentsline {section}{\numberline {1}高管增持事件}{2}
-\contentsline {subsection}{\numberline {1.1}高管增持事件概述}{2}
-\contentsline {subsubsection}{\numberline {1.1.1}高管增持事件公告日}{2}
-\contentsline {subsubsection}{\numberline {1.1.2}高管增持事件最优投资策略}{2}
